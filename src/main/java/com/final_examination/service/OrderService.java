@@ -25,6 +25,10 @@ public class OrderService implements IOrderService{
         return orderRepository.findById(orderId).orElse(null);
     }
 
+    public void save (Order order) {
+        orderRepository.save(order);
+    }
+
     @Transactional
     @Override
     public Order updateOrder(Long orderId, Order orderDetails) {

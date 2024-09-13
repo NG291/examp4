@@ -61,11 +61,12 @@
             <td th:text="${order.product.name}"></td>
             <td th:text="${order.product.price}"></td>
             <td th:text="${order.product.productType.name}"></td>
-            <td th:text="${#dates.format(order.purchaseDate, 'dd-MM-yyyy')}"></td>
+<!--            <td th:text="${#dates.format(order.purchaseDate, 'dd-MM-yyyy')}"></td>-->
+            <td th:text="${order.purchaseDate}">   </td>
             <td th:text="${order.quantity}"></td>
             <td th:text="${order.product.price * order.quantity}"></td>
             <td>
-                <a th:href="@{/orders/{id}/edit(id=${order.id})}" class="btn btn-warning">Sửa</a>
+                <a th:href="@{/orders/update/{id}(id=${order.id})}" class="btn btn-warning">Sửa</a>
             </td>
         </tr>
         </tbody>

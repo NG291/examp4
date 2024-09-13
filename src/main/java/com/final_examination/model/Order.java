@@ -3,6 +3,8 @@ package com.final_examination.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @Table(name = "orders")
@@ -15,7 +17,7 @@ public class Order {
 
     //    @Transient
     @Column(name = "ngay_mua")
-    private String purchaseDate;
+    private LocalDate purchaseDate;
 
     @Column(name = "so_luong")
     private Integer quantity;

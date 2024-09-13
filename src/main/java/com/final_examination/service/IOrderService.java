@@ -13,4 +13,6 @@ public interface IOrderService {
     Order findById(Long id);
 
     Order updateOrder(Long orderId, Order order);
+
+    void save(Order order);
 }
